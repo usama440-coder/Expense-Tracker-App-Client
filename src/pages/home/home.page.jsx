@@ -15,6 +15,7 @@ const Home = () => {
     dispatch(fetchExpenses());
   }, [dispatch]);
 
+  console.log(user);
   return (
     <div className="home">
       {error ? (
