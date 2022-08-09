@@ -17,7 +17,10 @@ const Navbar = () => {
       .get(`${SERVER_URL}/users/logout`, {
         withCredentials: true,
       })
-      .then((res) => dispatch(clearUser()))
+      .then((res) => {
+        console.log(res);
+        dispatch(clearUser());
+      })
       .then(navigate("/"))
       .catch((err) => console.log(err));
   };
