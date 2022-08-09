@@ -9,7 +9,12 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     setUser: (state, action) => {
-      state.name = action.payload;
+      const localName = localStorage.setItem("user", action.payload);
+      state.name = localName;
+    },
+    clearUser: (state, action) => {
+      localStorage.removeItem("user");
+      state.name = "";
     },
   },
 });

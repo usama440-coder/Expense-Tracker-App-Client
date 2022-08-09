@@ -17,7 +17,7 @@ const Navbar = () => {
       .get(`${SERVER_URL}/users/logout`, {
         withCredentials: true,
       })
-      .then((res) => dispatch(setUser("")))
+      .then((res) => dispatch(setUser()))
       .then(navigate("/"))
       .catch((err) => console.log(err));
   };

@@ -2,8 +2,8 @@ import "./login.page.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-// import { useDispatch } from "react-redux";
-// import { setUser } from "../../redux/slice/userSlice";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../redux/slice/userSlice";
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SERVER_URL from "../../utils";
@@ -12,7 +12,7 @@ axios.defaults.withCredentials = true;
 const Login = () => {
   const [inputs, setInputs] = useState({});
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const data = {
     email: inputs.email,
@@ -32,7 +32,7 @@ const Login = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data.data.name);
+        dispatch(setUser(res.data.data.name));
         navigate("/home");
       })
       .catch((err) => {
