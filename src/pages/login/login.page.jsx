@@ -38,7 +38,8 @@ const Login = () => {
         navigate("/home");
       })
       .catch((err) => {
-        toast.error(err.response.data.message, {
+        console.log(err);
+        toast.error("err.response.data.message", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: false,
