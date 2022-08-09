@@ -9,7 +9,7 @@ import Summary from "../../components/Summary/Summary.component";
 const Home = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.expense);
-  // const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(fetchExpenses());
@@ -21,7 +21,7 @@ const Home = () => {
         <h2>Not Authorized</h2>
       ) : (
         <>
-          <h2>{`Welcome Back`}</h2>
+          <h2>{`Welcome Back ${user.name.toUpperCase()}!`}</h2>
           <br />
           {loading ? (
             <h2>Loading</h2>

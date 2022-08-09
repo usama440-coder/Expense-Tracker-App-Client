@@ -38,16 +38,15 @@ const Register = () => {
           });
         })
         .catch((err) => {
-          console.log(err);
-          // toast.error(err.response.data.message, {
-          //   position: "top-center",
-          //   autoClose: 2000,
-          //   hideProgressBar: false,
-          //   closeOnClick: true,
-          //   pauseOnHover: true,
-          //   draggable: true,
-          //   progress: undefined,
-          // });
+          toast.error(err.response.data.message, {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         });
     } else {
       toast.warn("Password do not match", {
