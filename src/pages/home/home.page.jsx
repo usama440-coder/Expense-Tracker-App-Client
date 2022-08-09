@@ -22,7 +22,7 @@ const Home = () => {
         <h2>Not Authorized</h2>
       ) : (
         <>
-          <h2>{`Welcome Back ${user.name.toUpperCase()}!`}</h2>
+          <h2>{`Welcome Back ${user.name}!`}</h2>
           <br />
           {loading ? (
             <h2>Loading</h2>
