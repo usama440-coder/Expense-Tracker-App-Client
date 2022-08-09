@@ -28,7 +28,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${SERVER_URL}/users/login`, data, {
+      .post(`${SERVER_URL}users/login`, data, {
         withCredentials: true,
       })
       .then((res) => {
