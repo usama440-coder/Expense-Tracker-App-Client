@@ -1,0 +1,31 @@
+.home {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h2 {
+    margin-bottom: 20px;
+}
+
+.homeContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+@media screen and (max-width:786px) {
+    .homeContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.homeHistory {
+    grid-column: 1/ 3;
+}

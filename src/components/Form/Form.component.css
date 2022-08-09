@@ -1,0 +1,39 @@
+
+.homeForm form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.homeForm form input, select, button {
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    outline: none;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+.homeForm form input:focus, select:focus {
+    border: 2px solid blue;
+}
+
+.homeForm form label {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.homeForm form button {
+    background: transparent;
+    border: 2px solid rgb(0,98,209);
+    transition: all 0.25s;
+}
+
+.homeForm form button:hover {
+    background-color: rgb(0,98,209);
+    color: white;
+    cursor: pointer;
+}

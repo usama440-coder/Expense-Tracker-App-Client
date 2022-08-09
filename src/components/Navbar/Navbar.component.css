@@ -1,0 +1,13 @@
+.navbar {
+    background-color: steelblue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+
+.signoutBtn {
+    cursor: pointer;
+    font-size: 20px;
+}

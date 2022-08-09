@@ -1,0 +1,58 @@
+.history {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.historyContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 4px 9px -1px rgba(112,104,104,0.38);
+    margin-bottom: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+@media screen and (max-width:786px) {
+    .historyContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.historyContainer p, .trashIcon {
+    flex: 1;
+}
+
+.reason {
+    border-radius: 20px;
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expense {
+    border: 2px solid red;
+}
+
+.saving {
+    border: 2px solid green;
+}
+
+.date {
+    color: gray;
+}
+
+.amount {
+    font-weight: bold;
+}
+
+.trashIcon {
+    color: red;
+}
