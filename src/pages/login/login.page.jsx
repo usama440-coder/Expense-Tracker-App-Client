@@ -34,8 +34,7 @@ const Login = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(cookies);
-        dispatch(setUser("some"));
+        console.log(res);
         navigate("/home");
       })
       .catch((err) => {
