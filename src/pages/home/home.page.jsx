@@ -9,7 +9,7 @@ import Summary from "../../components/Summary/Summary.component";
 const Home = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.expense);
-  const user = useSelector((state) => state.user);
+  // const user = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(fetchExpenses());

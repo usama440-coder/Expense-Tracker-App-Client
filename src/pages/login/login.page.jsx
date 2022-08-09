@@ -2,19 +2,17 @@ import "./login.page.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
-import { setUser } from "../../redux/slice/userSlice";
+// import { useDispatch } from "react-redux";
+// import { setUser } from "../../redux/slice/userSlice";
 import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Cookies from "universal-cookie";
 import SERVER_URL from "../../utils";
 axios.defaults.withCredentials = true;
-const cookies = new Cookies();
 
 const Login = () => {
   const [inputs, setInputs] = useState({});
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const data = {
     email: inputs.email,
