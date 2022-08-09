@@ -3,7 +3,7 @@ import { FaSignOutAlt } from "react-icons/fa";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setUser } from "../../redux/slice/userSlice";
+import { clearUser } from "../../redux/slice/userSlice";
 import SERVER_URL from "../../utils";
 axios.defaults.withCredentials = true;
 
@@ -17,7 +17,7 @@ const Navbar = () => {
       .get(`${SERVER_URL}/users/logout`, {
         withCredentials: true,
       })
-      .then((res) => dispatch(setUser()))
+      .then((res) => dispatch(clearUser()))
       .then(navigate("/"))
       .catch((err) => console.log(err));
   };
