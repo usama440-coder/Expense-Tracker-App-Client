@@ -34,6 +34,7 @@ const Login = () => {
         withCredentials: true,
       })
       .then((res) => {
+        console.log(cookies);
         dispatch(setUser("some"));
         navigate("/home");
       })
